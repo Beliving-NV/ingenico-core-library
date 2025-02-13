@@ -1,7 +1,7 @@
 {
     "name": "ingenico/ogone-client",
     "description": "Ingenico ePayments Core Library",
-    "version": "7.1.0",
+    "version": "7.2.0",
     "license": [
         "OSL-3.0"
     ],
@@ -29,7 +29,7 @@
         "monolog/monolog": "*",
         "league/iso3166": "*",
         "graylog2/gelf-php": "~1.5",
-        "symfony/translation": "~4.2",
+        "symfony/translation": "^4.4|^5.0|^6.0",
         "mobiledetect/mobiledetectlib": "~2.8.0",
         "viison/address-splitter": "~0.3.4"
     },

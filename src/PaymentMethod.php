@@ -6,9 +6,8 @@ class PaymentMethod implements \Countable, \IteratorAggregate
 {
     /**
      * Holds all the Payment Methods with their properties
-     * @var array
      */
-    private $payment_methods = [];
+    private array $payment_methods = [];
 
     /**
      * Category Labels
@@ -62,6 +61,7 @@ class PaymentMethod implements \Countable, \IteratorAggregate
      *
      * @return int
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->payment_methods);
@@ -74,6 +74,7 @@ class PaymentMethod implements \Countable, \IteratorAggregate
      *
      * @return \ArrayIterator
      */
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return new \ArrayIterator($this->payment_methods);
@@ -236,7 +237,7 @@ class PaymentMethod implements \Countable, \IteratorAggregate
 
         /** @var PaymentMethod\PaymentMethod $paymentMethod */
         foreach ($paymentMethods as $paymentMethod) {
-            if (strtolower($paymentMethod->getBrand()) === strtolower($brand)) {
+            if ($paymentMethod !== null && strtolower($paymentMethod->getBrand()!== null) === strtolower($brand!== null)) {
                 return $paymentMethod;
             }
         }
@@ -256,7 +257,7 @@ class PaymentMethod implements \Countable, \IteratorAggregate
 
         /** @var PaymentMethod\PaymentMethod $paymentMethod */
         foreach ($paymentMethods as $paymentMethod) {
-            if (strtolower($paymentMethod->getId()) === strtolower($id)) {
+            if (strtolower($paymentMethod->getId()) === strtolower((string) $id)) {
                 return $paymentMethod;
             }
         }

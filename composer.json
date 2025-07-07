@@ -28,7 +28,7 @@
         "ingenico/ogone-sdk-php": "^3.1.0",
         "monolog/monolog": "*",
         "league/iso3166": "*",
-        "graylog2/gelf-php": "~1.5",
+        "graylog2/gelf-php": "~2.0",
         "symfony/translation": "^4.4|^5.0|^6.0",
         "mobiledetect/mobiledetectlib": "~2.8.0",
         "viison/address-splitter": "~0.3.4"

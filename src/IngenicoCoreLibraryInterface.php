@@ -670,7 +670,7 @@ interface IngenicoCoreLibraryInterface
      *
      * @return $this
      */
-    public function setLogger(LoggerInterface $logger = null);
+    public function setLogger(?LoggerInterface $logger = null);
 
     /**
      * Gets Logger.

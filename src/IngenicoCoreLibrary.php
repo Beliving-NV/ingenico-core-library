@@ -806,7 +806,7 @@ class IngenicoCoreLibrary implements
      *
      * @return $this
      */
-    public function setLogger(LoggerInterface $logger = null)
+    public function setLogger(?LoggerInterface $logger = null)
     {
         if ($logger) {
             $this->logger = $logger;
